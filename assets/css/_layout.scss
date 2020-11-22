@@ -1,0 +1,354 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-primary-black;
+    letter-spacing: $letter-spacing;
+    line-height: 1;
+    color: $color-dark;
+}
+
+p {
+    font-size: 0.97rem;
+    color: $color-dark;
+}
+
+a {
+    color: $color-dark;
+    @include transition(all);
+
+    &:hover, &:focus {
+        color: lighten($color-dark, 30%);
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.h2 {
+    font-family: $font-primary-book;
+    color: $color-medium;
+    line-height: 1;
+}
+
+body {
+    font-family: $font-primary-book;
+}
+
+.font-bold {
+    font-family: $font-primary-black;
+}
+
+.font-bold-uppercase {
+    font-family: $font-primary-black;
+    text-transform: uppercase;
+}
+
+.shadow-inset-top {
+    box-shadow: $shadow-inset;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.3em 0 0.5em rgba(0,0,0,0.5);
+    overflow-x: hidden;
+    z-index: 5;
+    transform: translateX(0);
+    @include transition(transform);
+    background-color: $color-light;
+}
+
+.wrap.active {
+    transform: translateX(calc(-100% + 4em));
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: $color-light;
+}
+
+//--- Mobile Nav
+.mobile-nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-light-10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('../img/door-edge.png'),
+                      radial-gradient(81.61% 50% at 100% 50%, $color-light 0%, $color-light-10 100%);;
+    background-repeat: no-repeat;
+    background-position: 3.6em;
+    background-size: contain;
+    padding-right: 1em;
+    overflow: hidden;
+
+    img {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        transform: translateX(20%) rotate(-15deg);
+        @include transition(width);
+
+        @include breakpoint-medium {
+            width: 50%;
+        }
+    }
+
+    a {
+        text-transform: uppercase;
+        
+        @include breakpoint-medium {
+            font-size: 1.5em;
+        }
+    }
+}
+
+//--- Header
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6em;
+    padding: $padding-x-1;
+    background-color: $color-light;
+    border-bottom: $border-thin-dark;
+    position: fixed;
+    width: 100%;
+    z-index: 90;
+    @include transition(all);  
+
+    .menu-mobile {
+        padding-right: 1em;
+        @include breakpoint-custom(67){
+            display: none;
+        }
+    }
+
+    .menu {
+        display: none;
+
+        @include breakpoint-custom(67){
+            display: flex;
+        }
+    }
+
+    .menu li:not(:last-child) {
+        border-right: $border-thin-dark;
+    }
+
+    .menu a {
+        text-transform: uppercase;
+        padding: 0;
+        margin: $margin-x-4;
+        padding-bottom: 0.8em;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-image: url('../img/underline.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 6px;
+            width: 0;
+            opacity: 0;
+            @include transition(all);
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    }
+
+    .menu a.active {
+        &::after {
+            opacity: 1;
+            width: 100%;
+        }
+    }
+
+    .nav-brand img{
+        width: 15em;
+        padding-left: 0.5em;
+        display: block;
+        @include transition(width);
+
+        @include breakpoint-medium {
+            width: 20em;
+        }
+    }
+
+    &--scrolled {
+        height: 4em;
+        box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.2);
+
+        .nav-brand img {
+            width: 10em;
+
+            @include breakpoint-medium {
+                width: 12em;
+            }
+        }
+    }
+
+    @include breakpoint-large {
+        padding: $padding-x-4;
+    }
+}
+
+.main-header.active {
+    transform: translateX(calc(-100% + 4em));
+}
+
+//--- Footer
+footer {
+    min-height: 3em;
+    border-top: $border-thin-dark;
+
+    .footer-upper {
+        padding: 1.5rem 0;
+        font-size: 0.9rem;
+        background-color: $color-light;
+
+        .cell-brand {
+            padding: $padding-x-1;
+            flex: 0 0 100%;
+        }
+        
+        .footer-brand {
+            padding-bottom: 2em;
+            display: block;
+            width: 15em;
+            @include transition(width);
+
+            @include breakpoint-medium {
+                width: 20em;
+            }
+        }
+
+        .cell-container {
+            padding: 0.8em;
+            flex: 0 0 100%;
+
+            @include breakpoint-large {
+                flex: 0 0 25%;
+            }
+
+            &:last-child {
+                flex: 1 0 auto;
+            }
+        }
+
+        .cell-lead {
+            @include breakpoint-large {
+                flex: 0 0 15%;
+            }
+        }
+
+        .menu a {
+            padding: 0.5em 0;
+        }
+    }
+
+    .footer-lower {
+        background-color: $color-dark;
+        color: $color-medium;
+        font-size: 0.8rem;
+        
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 5em;
+            @include transition(all);
+
+            @include breakpoint-medium {
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        }
+
+        .cell-copyright {
+            padding-bottom: 0.5em;
+            @include transition(all);
+
+            @include breakpoint-medium {
+                padding-bottom: 0;
+                padding-right: 2em;
+            }
+        }
+
+        .menu a {
+            color: $color-light;
+            padding: 0 1em;
+        }
+
+        .menu li:not(:last-child) {
+            border-right: $border-thin-light;
+        }
+
+    }
+
+    form {        
+        input[type="email"] {
+            @include breakpoint-medium {
+                width: 50%;
+            }
+            
+            @include breakpoint-large {
+                width: 100%;
+            }
+        }
+    }
+
+    .grid-x > div:last-child {
+        p {
+            padding: 0.4em;
+        }
+    }
+}
+
+//--- Overall Forms
+form {
+    input[type="email"] {
+        border-radius: $border-radius-small;
+        margin: $margin-y-1;
+    }
+
+    input[type="submit"] {
+        margin: $margin-y-1;
+    }
+}
+
+//--- Overall Section
+.section {
+    position: relative;
+    padding: 6em 0 3em 0;
+    background-color: $color-light;
+    min-height: 5em;
+
+    @include breakpoint-medium {
+        padding: 6em 0 4em 0
+    }
+    
+    @include breakpoint-large {
+        padding: 7em 0 8em 0
+    }
+}
+

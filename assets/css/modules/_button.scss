@@ -1,0 +1,11 @@
+.button-custom {
+    background-color: $color-blue;
+    text-transform: uppercase;
+    border-radius: $border-radius-small;
+    transition: ease 0.3s all;
+    
+    &:hover {
+        background-color: darken($color-blue, 10%);
+        box-shadow: $shadow-small;
+    }
+}

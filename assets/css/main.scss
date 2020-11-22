@@ -1,0 +1,82 @@
+@import 'base',
+        'layout',
+        'modules/button',
+        'modules/menu-btn',
+        'modules/comments',
+        'modules/divider',
+        'modules/plan';
+
+
+//--- Hero Section
+.section-hero {
+    margin-top: 2em;
+
+    h1 {
+        font-size: $headline-size-1-mob;
+        @include transition(all);
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-1;
+            text-align: left;
+        }
+    }
+
+    h2 {
+        font-size: $headline-size-2-mob;
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-2;
+            text-align: left;
+
+        }
+    }
+
+    hr {
+        width: 80%;
+        margin: 2em auto;
+
+        @include breakpoint-medium {
+            margin: 2em 0;
+        }
+        
+        @include breakpoint-large {
+            width: 90%;
+        }
+    }
+
+    form {
+        padding-top: 1em;
+        label {
+            position: relative;
+            width: 90%;
+        }
+
+        @include breakpoint-large {
+            label {
+                width: 100%;
+            }
+        }
+    }
+
+    .hero-img {
+    
+        img {
+            padding-top: 4em;
+
+            @include breakpoint-medium {
+                padding-top: 6em;
+                width: 80%;
+                margin: auto;
+            }
+
+            @include breakpoint-large {
+                width: 100%;
+                margin-left: 5em;
+            }
+        }
+
+        
+    }
+}

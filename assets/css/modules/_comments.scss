@@ -1,0 +1,24 @@
+.font-handwritten {
+    font-family: $font-writing;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 10em;
+    bottom: 0;
+    right: 0;
+    transform: translateY(170%) rotate(-5deg);
+    @include transition(transform);
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 6em;
+        height: 2em;
+        background-image: url('../img/comment-arrow.svg');
+        background-repeat: no-repeat;
+        transform: translate(85%, -20%) rotate(-65deg);
+        transform-origin: top left;
+    }
+}

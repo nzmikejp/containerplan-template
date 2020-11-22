@@ -1,0 +1,153 @@
+//--- custom fonts
+@font-face {
+    font-family: 'gothambold';
+    src: url('../fonts/gotham/gothambold-webfont.woff2') format('woff2'),
+         url('../fonts/gotham/gothambold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gothambook';
+    src: url('../fonts/gotham/gotham-book-webfont.woff2') format('woff2'),
+         url('../fonts/gotham/gotham-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gothamblack';
+    src: url('../fonts/gotham/gotham-black-webfont.woff2') format('woff2'),
+         url('../fonts/gotham/gotham-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sharpie';
+    src: url('../fonts/sharpie/missy_sharpie-webfont.woff2') format('woff2'),
+         url('../fonts/sharpie/missy_sharpie-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$font-primary-book: 'gothambook', sans-serif;
+$font-primary-bold: 'gothambold', sans-serif;
+$font-primary-black: 'gothamblack', sans-serif;
+$font-writing: 'sharpie', 'cursive';
+
+$headline-size-1: 4.7rem;
+$headline-size-1-mob: 3.5rem;
+$headline-size-2: 3.2 rem;
+$headline-size-2-mob: 2.2rem;
+$headline-size-3: 2rem;
+$headline-size-3-mob: 1.5rem;
+
+$letter-spacing: -0.05em;
+
+
+//--- Colors
+$color-light: #fff;
+$color-light-10: #F7F7F7;
+$color-light-20: #DDDCDC;
+$color-medium: #9D9D9D;
+$color-dark-80: #525050;
+$color-dark: #363131;
+$color-blue: #2F72DB;
+
+$bg-gradient: radial-gradient(44.76% 159.77% at 21.48% 0%, $color-dark-80 0%, $color-dark 100%);
+
+
+//--- Padding and Margins
+$padding-x-1: 0 0.5rem;
+$padding-x-2: 0 1rem;
+$padding-x-3: 0 1.5rem;
+$padding-x-4: 0 2rem;
+$padding-x-5: 0 2.5rem;
+$padding-x-6: 0 3rem;
+
+$padding-y-1: 0.5rem 0;
+$padding-y-2: 1rem 0;
+$padding-y-3: 1.5rem 0;
+$padding-y-4: 2rem 0;
+$padding-y-5: 2.5rem 0;
+$padding-y-6: 3rem 0;
+
+$padding-1: 0.5rem 0.5rem;
+$padding-2: 1rem 1rem;
+$padding-3: 1.5rem 1.5rem;
+$padding-4: 2rem 2rem;
+$padding-5: 2.5rem 2.5rem;
+$padding-6: 3rem 3rem;
+
+$margin-x-1: 0 0.5rem;
+$margin-x-2: 0 1rem;
+$margin-x-3: 0 1.5rem;
+$margin-x-4: 0 2rem;
+$margin-x-5: 0 2.5rem;
+$margin-x-6: 0 3rem;
+
+$margin-y-1: 0.5rem 0;
+$margin-y-2: 1rem 0;
+$margin-y-3: 1.5rem 0;
+$margin-y-4: 2rem 0;
+$margin-y-5: 2.5rem 0;
+$margin-y-6: 3rem 0;
+
+$margin-1: 0.5rem 0.5rem;
+$margin-2: 1rem 1rem;
+$margin-3: 1.5rem 1.5rem;
+$margin-4: 2rem 2rem;
+$margin-5: 2.5rem 2.5rem;
+$margin-6: 3rem 3rem;
+
+
+//--- Borders
+$border-thin-dark: thin rgba(0,0,0,0.2) solid;
+$border-thin-light: thin rgba(255,255,255,1) solid;
+
+$border-radius-small: 0.1875rem;
+
+
+//--- Shadows
+$shadow-inset: inset 0 0.5em 0.8em rgba(0,0,0,0.1);
+$shadow-small: 0 0.6em 0.5em -0.25em rgba(0,0,0,0.2);
+$shadow-section: 0 0.7em 0.7em rgba(0,0,0,0.05);
+
+//--- Transitions
+@mixin transition($obj) {
+    transition: ease-in-out 0.3s $obj;
+}
+
+
+//--- breakpoints
+$screen-medium-min: 40em;
+$screen-large-min: 64em;
+
+@mixin breakpoint-medium {
+    @media (min-width: #{$screen-medium-min}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-large {
+    @media (min-width: #{$screen-large-min}) {
+        @content;
+    }
+}
+
+@mixin breakpoint-custom($screen) {
+    @media (min-width: $screen+'em') {
+        @content;
+    }
+}
+
+
+//--- hard reset
+* {
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}

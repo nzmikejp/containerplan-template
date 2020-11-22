@@ -1,0 +1,27 @@
+.divider {
+    position: relative;
+    border-bottom: 1px $color-medium solid;
+    box-shadow: $shadow-section;
+    z-index: 2;
+    min-height: 2em;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 78%);
+        width: 20em;
+        height: 5em;
+        background-image: url('/assets/img/divider-fold.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include transition(all);
+
+        @include breakpoint-large {
+            transform: translate(-50%, 67%);
+            width: 30em;
+        }
+    }
+}
