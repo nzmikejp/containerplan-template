@@ -1282,6 +1282,8 @@ form input[type="submit"] {
   position: absolute;
   bottom: 0;
   left: 0;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
   width: 15%;
   height: 0.05rem;
   background-color: #DDDCDC;
@@ -1313,8 +1315,8 @@ form input[type="submit"] {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  -webkit-transform: translate(-52%, 50%);
+          transform: translate(-52%, 50%);
   width: 60%;
   text-align: center;
   z-index: 1;
