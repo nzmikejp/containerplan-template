@@ -209,3 +209,95 @@
 
     }
 }
+
+//--- Section Donate
+.section-donate {
+    background: no-repeat $bg-gradient;
+    min-height: 21.5em;
+
+    .cell-content p{
+        color: $color-light;
+    }
+
+    .headline-dim-light {
+        h2 {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0.4em 0;
+            font-size: $headline-size-2-mob;
+            color: $color-light-20;
+            max-width: 80%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 15%;
+                height: 0.05rem;
+                background-color: $color-light-20;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 15%;
+                height: 0.05rem;
+                background-color: $color-light-20;
+            }
+
+            @include breakpoint-medium {
+                font-size: $headline-size-2;
+            }
+        }
+
+        .headline-label {
+            font-family: $font-writing;
+            line-height: 1.2;
+            letter-spacing: initial;
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            color: $color-light-20;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: 60%;
+            text-align: center;
+            z-index: 1;
+            @include transition(all);
+    
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 7em;
+                height: 3em;
+                transform: translate(-125%, 2%);
+                background: center / contain no-repeat url('/assets/img/dimention-light.svg');
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 7em;
+                height: 3em;
+                transform: translate(125%, 2%);
+                background: center / contain no-repeat url('/assets/img/dimention-light.svg');
+            }
+    
+            @include breakpoint-custom(25.8){
+                font-size: 0.6rem;
+            }
+    
+            @include breakpoint-medium {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

@@ -23,9 +23,10 @@
     
     .headline-label {
         font-family: $font-writing;
+        line-height: 1.2;
         background-color: $color-light;
         letter-spacing: initial;
-        font-size: 0.65rem;
+        font-size: 0.55rem;
         text-transform: uppercase;
         color: $color-dark;
         position: absolute;
@@ -44,8 +45,8 @@
             left: 0;
             width: 7em;
             height: 3em;
-            transform: translate(-160%, -10%);
-            background: center / contain no-repeat url('/assets/img/dimention-left.svg');
+            transform: translate(-160%, -7%);
+            background: center / contain no-repeat url('/assets/img/dimention-right.svg');
         }
         
         &::after {
@@ -55,8 +56,12 @@
             right: 0;
             width: 7em;
             height: 3em;
-            transform: translate(160%, -10%);
+            transform: translate(160%, -7%);
             background: center / contain no-repeat url('/assets/img/dimention-right.svg');
+        }
+
+        @include breakpoint-custom(25.8){
+            font-size: 0.6rem;
         }
 
         @include breakpoint-medium {
