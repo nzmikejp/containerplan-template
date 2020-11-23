@@ -1,0 +1,20 @@
+.swiper-container {
+
+    .swiper-slide {
+        img {
+            border-radius: 0.5em;
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: $color-light;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background-color: $color-light;
+    }
+}

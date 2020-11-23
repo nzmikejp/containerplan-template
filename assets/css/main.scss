@@ -4,7 +4,10 @@
         'modules/menu-btn',
         'modules/comments',
         'modules/divider',
-        'modules/plan';
+        'modules/plan',
+        'modules/cp-card',
+        'modules/dimention-headline',
+        'modules/slider';
 
 
 //--- Section Hero
@@ -23,11 +26,11 @@
     }
 
     h2 {
-        font-size: $headline-size-2-mob;
+        font-size: $headline-size-3-mob;
         text-align: center;
 
         @include breakpoint-medium {
-            font-size: $headline-size-2;
+            font-size: $headline-size-3;
             text-align: left;
 
         }
@@ -84,7 +87,11 @@
 //--- Section Plan
 .section-plan {
     .plan-mark {
-        margin: 2em 0 0 1em;
+        margin: 2em 0 2em 1em;
+
+        @include breakpoint-medium {
+            margin: 2em 0 0 1em;
+        }
     }
 }
 
@@ -150,5 +157,55 @@
             max-width: 70%;
             margin: 0 auto;
         }
+    }
+}
+
+//--- Section Container Living
+.section-container-living {
+    .h2 {
+        font-size: 2.2rem;
+
+        @include breakpoint-medium {
+            font-size: 3rem;
+        }
+    }
+}
+
+//--- Section Cta
+.section-cta {
+    .plan-content p {
+        padding-top: 1em;
+    }
+    .plan-mark {
+        margin: 2em 0 3em 1em;
+
+        @include breakpoint-medium {
+            margin: 2em 0 0 1em;
+        }
+        
+        @include breakpoint-large {
+            margin: -2em 0 2em 1em;
+        }
+    }
+
+    form {
+        padding-top: 1em;
+
+        label {
+            position: relative;
+            
+            @include  breakpoint-medium {
+                width: 90%;
+            }
+        }
+
+        .font-handwritten {
+            display: none;
+
+            @include breakpoint-medium {
+                display: block;
+            }
+        }
+
     }
 }

@@ -719,7 +719,13 @@ form input[type="submit"] {
 }
 
 .plan .plan-content h2 {
-  font-size: 4rem;
+  font-size: 3.2rem;
+}
+
+@media (min-width: 40em) {
+  .plan .plan-content h2 {
+    font-size: 4rem;
+  }
 }
 
 .plan .plan-mark {
@@ -799,6 +805,48 @@ form input[type="submit"] {
   z-index: 1;
 }
 
+.plan-mark.bottom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 130%;
+  border-style: solid;
+  border-width: 3.85em 3.85em 0 3.85em;
+  border-color: #9D9D9D transparent transparent transparent;
+  z-index: 1;
+}
+
+.plan-mark.right::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 130%;
+  border-style: solid;
+  border-width: 3.85em 0 3.85em 3.85em;
+  border-color: transparent transparent transparent #9D9D9D;
+  z-index: 1;
+}
+
+.plan-mark.left::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  width: 130%;
+  border-style: solid;
+  border-width: 3.85em 3.85em 3.85em 0;
+  border-color: transparent #9D9D9D transparent transparent;
+  z-index: 1;
+}
+
 .tape-center::after {
   content: '';
   position: absolute;
@@ -808,6 +856,34 @@ form input[type="submit"] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-5deg);
           transform: translate(-50%, -50%) rotate(-5deg);
+  background: center/contain no-repeat url("/assets/img/tape.png");
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.tape-center-y::before {
+  content: '';
+  position: absolute;
+  width: 15.5em;
+  height: 3.5em;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-5deg);
+          transform: translate(-50%, -50%) rotate(-5deg);
+  background: center/contain no-repeat url("/assets/img/tape.png");
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.tape-center-y::after {
+  content: '';
+  position: absolute;
+  width: 15.5em;
+  height: 3.5em;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-70%, 50%) rotate(10deg);
+          transform: translate(-70%, 50%) rotate(10deg);
   background: center/contain no-repeat url("/assets/img/tape.png");
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -839,6 +915,126 @@ form input[type="submit"] {
   background: center/contain no-repeat url("/assets/img/tape.png");
   mix-blend-mode: multiply;
   pointer-events: none;
+}
+
+.cp-card {
+  padding: 3em 0;
+}
+
+.cp-card .card-headline {
+  padding-top: 1.5em;
+}
+
+.cp-card .card-headline h3 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 40em) {
+  .cp-card .card-headline h3 {
+    font-size: 3rem;
+  }
+}
+
+.cp-card .card-headline .h3 {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 40em) {
+  .cp-card .card-headline .h3 {
+    font-size: 2.2rem;
+  }
+}
+
+.cp-card .card-content .grid-x > div {
+  margin-top: 1em;
+}
+
+.headline-dim h2 {
+  position: relative;
+  display: inline-block;
+  padding: 0.4em 0 0 0;
+  font-size: 3.2rem;
+}
+
+.headline-dim h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.05rem;
+  background-color: #363131;
+}
+
+@media (min-width: 40em) {
+  .headline-dim h2 {
+    font-size: 4rem;
+  }
+}
+
+.headline-dim .headline-label {
+  font-family: "sharpie", "cursive";
+  background-color: #fff;
+  letter-spacing: initial;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #363131;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+  z-index: 1;
+  -webkit-transition: ease-in-out 0.3s all;
+  transition: ease-in-out 0.3s all;
+}
+
+.headline-dim .headline-label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7em;
+  height: 3em;
+  -webkit-transform: translate(-160%, -10%);
+          transform: translate(-160%, -10%);
+  background: center/contain no-repeat url("/assets/img/dimention-left.svg");
+}
+
+.headline-dim .headline-label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7em;
+  height: 3em;
+  -webkit-transform: translate(160%, -10%);
+          transform: translate(160%, -10%);
+  background: center/contain no-repeat url("/assets/img/dimention-right.svg");
+}
+
+@media (min-width: 40em) {
+  .headline-dim .headline-label {
+    font-size: 0.8rem;
+  }
+}
+
+.swiper-container .swiper-slide img {
+  border-radius: 0.5em;
+}
+
+.swiper-container .swiper-button-next, .swiper-container .swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-container .swiper-button-next:focus, .swiper-container .swiper-button-prev:focus {
+  outline: none;
+}
+
+.swiper-container .swiper-pagination-bullet {
+  background-color: #fff;
 }
 
 .section-hero {
@@ -923,7 +1119,13 @@ form input[type="submit"] {
 }
 
 .section-plan .plan-mark {
-  margin: 2em 0 0 1em;
+  margin: 2em 0 2em 1em;
+}
+
+@media (min-width: 40em) {
+  .section-plan .plan-mark {
+    margin: 2em 0 0 1em;
+  }
 }
 
 .section-about-plan {
@@ -993,6 +1195,60 @@ form input[type="submit"] {
   .section-about-plan .cell-render {
     max-width: 70%;
     margin: 0 auto;
+  }
+}
+
+.section-container-living .h2 {
+  font-size: 2.2rem;
+}
+
+@media (min-width: 40em) {
+  .section-container-living .h2 {
+    font-size: 3rem;
+  }
+}
+
+.section-cta .plan-content p {
+  padding-top: 1em;
+}
+
+.section-cta .plan-mark {
+  margin: 2em 0 3em 1em;
+}
+
+@media (min-width: 40em) {
+  .section-cta .plan-mark {
+    margin: 2em 0 0 1em;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-cta .plan-mark {
+    margin: -2em 0 2em 1em;
+  }
+}
+
+.section-cta form {
+  padding-top: 1em;
+}
+
+.section-cta form label {
+  position: relative;
+}
+
+@media (min-width: 40em) {
+  .section-cta form label {
+    width: 90%;
+  }
+}
+
+.section-cta form .font-handwritten {
+  display: none;
+}
+
+@media (min-width: 40em) {
+  .section-cta form .font-handwritten {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */

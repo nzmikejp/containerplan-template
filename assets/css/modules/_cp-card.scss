@@ -1,0 +1,29 @@
+.cp-card {
+    padding: 3em 0;
+
+    .card-headline {
+        padding-top: 1.5em;
+
+        h3 {
+           font-size: $headline-size-4-mob;
+
+           @include breakpoint-medium {
+               font-size: $headline-size-4;
+           }
+        }
+
+        .h3 {
+            font-size: 1.8rem;
+
+            @include breakpoint-medium {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .card-content {
+        .grid-x > div {
+            margin-top: 1em;
+        }
+    }
+}
