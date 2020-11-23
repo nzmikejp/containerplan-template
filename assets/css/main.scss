@@ -7,7 +7,7 @@
         'modules/plan';
 
 
-//--- Hero Section
+//--- Section Hero
 .section-hero {
     margin-top: 2em;
 
@@ -78,5 +78,77 @@
         }
 
         
+    }
+}
+
+//--- Section Plan
+.section-plan {
+    .plan-mark {
+        margin: 2em 0 0 1em;
+    }
+}
+
+//--- Section About Plan
+.section-about-plan {
+    padding-top: 2em;
+
+    .cell-header {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            padding-right: 1rem;
+            line-height: 1;
+            font-size: 4rem;
+            border-right: 0.1rem $color-dark solid;
+            margin-bottom: 0;
+        }
+
+        h3 {
+            padding: 0.2rem 0.5rem;
+            margin-bottom: 0;
+            font-size: 2rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            padding: 0 0.7rem;
+
+        }
+    }
+
+    .cell-content {
+        margin-top: 1em;
+    }
+
+    .cell-img-wrap {
+        display: flex;
+    }
+
+    .cell-img {
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 0.1rem $color-dark solid;
+        @include transition(all);
+
+        @include breakpoint-large {
+            width: 12em;
+            height: 12em;
+        }
+    }
+
+    .cell-img:not(:last-child){
+        margin: 0 1em;
+    }
+
+    .cell-render {
+        
+
+        @include breakpoint-medium {
+            max-width: 70%;
+            margin: 0 auto;
+        }
     }
 }

@@ -25,3 +25,31 @@
         }
     }
 }
+
+.container-divider {
+    padding: 2em 1em;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        height: 0.05rem;
+        background-color: $color-medium;
+    }
+
+    .divider-wrap {
+        background-color: $color-light;
+        position: relative;
+        margin: 0 auto;
+        width: 5em;
+        
+        img {
+            width: 2.26em;
+            margin: 0 auto;   
+        }
+    }
+}
