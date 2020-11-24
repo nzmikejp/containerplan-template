@@ -5,9 +5,12 @@
         'modules/comments',
         'modules/divider',
         'modules/plan',
+        'modules/plan-mark',
+        'modules/plan-tape',
         'modules/cp-card',
         'modules/dimention-headline',
-        'modules/slider';
+        'modules/slider',
+        'modules/cp-ruler';
 
 
 //--- Section Hero
@@ -216,89 +219,45 @@
     min-height: 21.5em;
 
     .cell-content p{
+        padding-top: 1em;
         color: $color-light;
     }
+}
 
-    .headline-dim-light {
-        h2 {
-            position: relative;
-            display: inline-block;
-            padding: 0 0 0.4em 0;
-            font-size: $headline-size-2-mob;
-            color: $color-light-20;
-            max-width: 80%;
+//--- Why Containers Hero
+.section-why-containers {
+    margin-top: 2em;
 
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                transform: translateX(-10%);
-                width: 15%;
-                height: 0.05rem;
-                background-color: $color-light-20;
-            }
-            
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 15%;
-                height: 0.05rem;
-                background-color: $color-light-20;
-            }
+    h1 {
+        font-size: $headline-size-1-mob;
+        @include transition(all);
+        text-align: center;
 
-            @include breakpoint-medium {
-                font-size: $headline-size-2;
-            }
+        @include breakpoint-medium {
+            font-size: $headline-size-1;
+            text-align: left;
         }
+    }
 
-        .headline-label {
-            font-family: $font-writing;
-            line-height: 1.2;
-            letter-spacing: initial;
-            font-size: 0.55rem;
-            text-transform: uppercase;
-            color: $color-light-20;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-52%, 50%);
-            width: 60%;
-            text-align: center;
-            z-index: 1;
-            @include transition(all);
-    
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 7em;
-                height: 3em;
-                transform: translate(-125%, 2%);
-                background: center / contain no-repeat url('/assets/img/dimention-light.svg');
-            }
-            
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 7em;
-                height: 3em;
-                transform: translate(125%, 2%);
-                background: center / contain no-repeat url('/assets/img/dimention-light.svg');
-            }
-    
-            @include breakpoint-custom(25.8){
-                font-size: 0.6rem;
-            }
-    
-            @include breakpoint-medium {
-                font-size: 0.8rem;
-            }
+    h2 {
+        font-size: $headline-size-3-mob;
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-3;
+            text-align: left;
+
         }
+    }
+
+    .plan-mark {
+        margin: 2em;
+    }
+}
+
+//--- Section Stacked Plan
+.section-stacked-plans {
+    & > div:not(:last-child) {
+        margin-bottom: 4em;
     }
 }

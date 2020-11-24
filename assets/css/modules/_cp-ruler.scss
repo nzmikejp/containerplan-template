@@ -1,0 +1,15 @@
+.cp-ruler {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+    width: 50em;
+    z-index: 10;
+    transform: translate(-10%, 70%) rotate(-10deg);
+    @include transition(all);
+
+    @include breakpoint-large {
+        width: 65em;
+        transform: translate(20%, 50%) rotate(-10deg);
+    }
+}

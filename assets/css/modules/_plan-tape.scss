@@ -1,0 +1,71 @@
+.tape-center {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15.5em;
+        height: 3.5em;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-5deg);
+        background: center / contain no-repeat url('/assets/img/tape.png');
+        mix-blend-mode: multiply;
+        pointer-events: none;
+    }
+}
+
+.tape-center-y {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 15.5em;
+        height: 3.5em;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-5deg);
+        background: center / contain no-repeat url('/assets/img/tape.png');
+        mix-blend-mode: multiply;
+        pointer-events: none;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15.5em;
+        height: 3.5em;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-70%, 50%) rotate(10deg);
+        background: center / contain no-repeat url('/assets/img/tape.png');
+        mix-blend-mode: multiply;
+        pointer-events: none;
+    }
+}
+
+.tape-x {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 15.5em;
+        height: 3.5em;
+        top: 0;
+        left: 0;
+        transform: translate(-30%, 20%) rotate(-40deg);
+        background: center / contain no-repeat url('/assets/img/tape.png');
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 15.5em;
+        height: 3.5em;
+        bottom: 0;
+        right: 0;
+        transform: translate(30%, 30%) rotate(-25deg);
+        background: center / contain no-repeat url('/assets/img/tape.png');
+        mix-blend-mode: multiply;
+        pointer-events: none;
+    }
+}

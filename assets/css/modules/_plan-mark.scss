@@ -1,0 +1,111 @@
+.plan-mark {
+    width: 5.3em;
+    height: 5.3em;
+    position: relative;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 155%;
+        transform: translateX(-50%);
+        height: 1px;
+        background-color: $color-medium;
+        z-index: 3;
+    }
+
+    .mark-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 5.3em;
+        height: 5.3em;
+        background-color: $color-light;
+        border-radius: 50%;
+        border: 1px $color-medium solid;
+        z-index: 2;
+    }
+
+    .mark-brand {
+        width: 0.89em;
+        padding-top: 0.3rem;
+    }
+
+    h4 {
+        font-size: 0.53rem;
+        color: $color-medium;
+        padding-top: 0.3rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        color: $color-medium;
+    }
+}
+
+.plan-mark.top {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -99%);
+        width: 130%;
+        border-style: solid;
+        border-width: 0 3.85em 3.85em 3.85em;
+        border-color: transparent transparent $color-medium transparent;
+        z-index: 1;
+    }
+}
+
+.plan-mark.bottom {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 130%;
+        border-style: solid;
+        border-width: 3.85em 3.85em 0 3.85em;
+        border-color: $color-medium transparent transparent transparent;
+        z-index: 1;
+    }
+}
+
+.plan-mark.right {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, -50%);
+        width: 130%;
+        border-style: solid;
+        border-width: 3.85em 0 3.85em 3.85em;
+        border-color: transparent transparent transparent $color-medium ;
+        z-index: 1;
+    }
+}
+
+.plan-mark.left {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-100%, -50%);
+        width: 130%;
+        border-style: solid;
+        border-width: 3.85em 3.85em 3.85em 0;
+        border-color: transparent $color-medium transparent transparent;
+        z-index: 1;
+    }
+}
