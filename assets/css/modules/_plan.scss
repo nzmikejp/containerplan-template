@@ -118,7 +118,7 @@
         @include breakpoint-medium {
             position: absolute;
             bottom: 4.5em;
-            background-color: red;
+            background-color: $bg-alpha-dark;
             border-radius: 0 0.5rem 0 0.5rem;
             padding: 2em;
 

@@ -1,0 +1,14 @@
+.cp-pen {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(30%, 50%);
+    width: 30em;
+    z-index: 50;
+    @include transition(all);
+
+    @include breakpoint-medium {
+        transform: translate(10%, 50%);
+        width: 45em; 
+    }
+}

@@ -332,7 +332,9 @@ footer {
 
 //--- Overall Forms
 form {
-    input[type="email"] {
+    input[type="email"],
+    input[type="text"],
+    textarea {
         border-radius: $border-radius-small;
         margin: $margin-y-1;
     }
@@ -358,6 +360,6 @@ form {
     }
 }
 
-.grid-container {
+.grid-container, .cell {
     position: relative;
 }

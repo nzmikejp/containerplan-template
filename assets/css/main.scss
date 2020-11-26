@@ -1,16 +1,19 @@
 @import 'base',
-        '/assets/css/layout',
-        '/assets/css/modules/button',
-        '/assets/css/modules/menu-btn',
-        '/assets/css/modules/comments',
-        '/assets/css/modules/divider',
-        '/assets/css/modules/plan',
-        '/assets/css/modules/plan-mark',
-        '/assets/css/modules/plan-tape',
-        '/assets/css/modules/cp-card',
-        '/assets/css/modules/dimention-headline',
-        '/assets/css/modules/slider',
-        '/assets/css/modules/cp-ruler';
+        'layout',
+        'modules/button',
+        'modules/menu-btn',
+        'modules/comments',
+        'modules/divider',
+        'modules/plan',
+        'modules/plan-mark',
+        'modules/plan-tape',
+        'modules/cp-card',
+        'modules/dimention-headline',
+        'modules/slider',
+        'modules/cp-ruler',
+        'modules/coffee-stain',
+        'modules/cp-pen',
+        'modules/gallery';
 
 
 //--- Section Hero
@@ -257,7 +260,170 @@
 
 //--- Section Stacked Plan
 .section-stacked-plans {
+    padding-bottom: 6em;
+
     & > div:not(:last-child) {
         margin-bottom: 4em;
+    }
+
+    @include breakpoint-medium {
+        padding-bottom: 15em;
+    }
+}
+
+//--- Section Options
+.section-options {
+
+    h1 {
+        font-size: $headline-size-2-mob;
+        @include transition(all);
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-2;
+            text-align: left;
+        }
+    }
+
+    h2 {
+        font-size: $headline-size-5-mob;
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-5;
+            text-align: left;
+
+        }
+    }
+
+    .coffee-stain {
+        transform: translateX(50%);
+        width: 30em;
+    }
+
+    .cell-diagram {
+        margin: 3em 0 1em 0;
+
+        @include breakpoint-large {
+            margin: 5em 0 1em 0;
+        }
+
+        .diagram-img {
+            max-width: 57.2em;
+            margin: 0 auto;
+        }
+    }
+
+    .diagram-exploded:not(:last-child) {
+        margin-bottom: 1.5em;
+
+        @include breakpoint-large {
+            margin-bottom: 0;
+        }
+    }
+
+    .diagram-exploded img {
+        max-width: 60%;
+        margin: 0 auto;
+
+        @include breakpoint-medium {
+            max-width: 70%;
+        }  
+        
+        @include breakpoint-large {
+            max-width: 80%;
+        }  
+    }
+}
+
+//--- Section About
+.section-about {
+
+    @include breakpoint-large {
+        padding-bottom: 12em;
+    }
+
+    h2 {
+        width: 6.6em;
+    }
+
+    .headline-dim {
+        .headline-label {
+            &::before {
+                transform: translate(-130%, -7%);
+            }
+            
+            &::after {
+                transform: translate(130%, -7%);
+            }
+        }
+    }
+
+    .cell-content {
+        margin-top: 4em;
+    }
+
+    .about-img {
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .about-content {
+        margin-top: 2em;
+    }
+}
+
+//--- Section Contact
+.section-contact {
+    padding: 3em 0 0 0;
+
+    @include breakpoint-large {
+        padding: 6em 0 0 0;
+
+    }
+
+    h1 {
+        font-size: $headline-size-2-mob;
+        @include transition(all);
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-2;
+            text-align: left;
+        }
+    }
+
+    h2 {
+        font-size: $headline-size-5-mob;
+        text-align: center;
+
+        @include breakpoint-medium {
+            font-size: $headline-size-5;
+            text-align: left;
+
+        }
+    }
+
+    .plan-mark {
+        margin: 2em;
+    }
+}
+
+//--- Section Mail Form
+.section-mail-form {
+    padding-top: 4em;
+    padding-bottom: 7em;
+    @include transition(all);
+
+    @include breakpoint-medium {
+        padding-bottom: 12em; 
+    }
+    
+    @include breakpoint-large {
+        padding-bottom: 15em; 
+    }
+
+    form {
+       margin-bottom: 2em; 
     }
 }

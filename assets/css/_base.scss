@@ -46,6 +46,8 @@ $headline-size-3: 3.2rem;
 $headline-size-3-mob: 2.2rem;
 $headline-size-4: 3rem;
 $headline-size-4-mob: 2.5rem;
+$headline-size-5: 2.5rem;
+$headline-size-5-mob: 1.8rem;
 
 $letter-spacing: -0.05em;
 
@@ -60,7 +62,7 @@ $color-dark: #363131;
 $color-blue: #2F72DB;
 
 $bg-gradient: radial-gradient(44.76% 159.77% at 21.48% 0%, $color-dark-80 0%, $color-dark 100%);
-
+$bg-alpha-dark: rgba(54, 49, 49, 0.7);
 
 //--- Padding and Margins
 $padding-x-1: 0 0.5rem;

@@ -1,0 +1,44 @@
+.grid {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.grid li {
+	display: block;
+	padding: 7px;
+	width: 100%;
+    opacity: 0;
+    
+    @include breakpoint-medium {
+        width: 50%;
+    }
+    
+    @include breakpoint-large {
+        width: 33%;
+    }
+}
+
+.grid li.shown,
+.no-js .grid li,
+.no-cssanimations .grid li {
+	opacity: 1;
+}
+
+.grid li img {
+	border-radius: 0.5em;
+}
+
+.grid.effect-2 li.animate {
+	transform: translateY(200px);
+	animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+	0% { }
+	100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+	0% { }
+	100% { transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
