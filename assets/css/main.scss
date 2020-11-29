@@ -88,6 +88,10 @@
 
         
     }
+
+    .plan-mark {
+        margin: 2em;
+    }
 }
 
 //--- Section Plan
@@ -179,6 +183,8 @@
 
 //--- Section Cta
 .section-cta {
+    padding-bottom: 8em;
+
     .plan-content p {
         padding-top: 1em;
     }
@@ -221,14 +227,31 @@
     background: no-repeat $bg-gradient;
     min-height: 21.5em;
 
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 13em;
+        height: 8em;
+        background: center / contain no-repeat url('../img/x-tape.png');
+
+        @include breakpoint-large {
+            transform: translate(calc((-64em / 2) - 20%), -50%);
+        }
+    }
+
+
     .cell-content p{
         padding-top: 1em;
         color: $color-light;
     }
+
 }
 
 //--- Why Containers Hero
-.section-why-containers {
+.section-with-mark {
     margin-top: 2em;
 
     h1 {

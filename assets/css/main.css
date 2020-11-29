@@ -1415,6 +1415,10 @@ form input[type="submit"] {
   }
 }
 
+.section-hero .plan-mark {
+  margin: 2em;
+}
+
 .section-plan .plan-mark {
   margin: 2em 0 2em 1em;
 }
@@ -1505,6 +1509,10 @@ form input[type="submit"] {
   }
 }
 
+.section-cta {
+  padding-bottom: 8em;
+}
+
 .section-cta .plan-content p {
   padding-top: 1em;
 }
@@ -1554,16 +1562,35 @@ form input[type="submit"] {
   min-height: 21.5em;
 }
 
+.section-donate:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 13em;
+  height: 8em;
+  background: center/contain no-repeat url("../img/x-tape.png");
+}
+
+@media (min-width: 64em) {
+  .section-donate:before {
+    -webkit-transform: translate(calc((-64em / 2) - 20%), -50%);
+            transform: translate(calc((-64em / 2) - 20%), -50%);
+  }
+}
+
 .section-donate .cell-content p {
   padding-top: 1em;
   color: #fff;
 }
 
-.section-why-containers {
+.section-with-mark {
   margin-top: 2em;
 }
 
-.section-why-containers h1 {
+.section-with-mark h1 {
   font-size: 3.5rem;
   -webkit-transition: ease-in-out 0.3s all;
   transition: ease-in-out 0.3s all;
@@ -1571,25 +1598,25 @@ form input[type="submit"] {
 }
 
 @media (min-width: 40em) {
-  .section-why-containers h1 {
+  .section-with-mark h1 {
     font-size: 4.7rem;
     text-align: left;
   }
 }
 
-.section-why-containers h2 {
+.section-with-mark h2 {
   font-size: 2.2rem;
   text-align: center;
 }
 
 @media (min-width: 40em) {
-  .section-why-containers h2 {
+  .section-with-mark h2 {
     font-size: 3.2rem;
     text-align: left;
   }
 }
 
-.section-why-containers .plan-mark {
+.section-with-mark .plan-mark {
   margin: 2em;
 }
 
